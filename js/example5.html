@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function display()
+		{
+			p = document.getElementById("t1").value;
+			r = document.getElementById("t2").value;
+			t = document.getElementById("t3").value;
+			c = (parseInt(p)*parseInt(r)*parseInt(t))/100;
+			alert("Result is "+c);
+		}
+
+
+	</script>
+</head>
+<body>
+<p>Enter P</p>
+<p><input type="text" id="t1" /> </p>
+<p>Enter R</p>
+<p><input type="text" id="t2"> </p>
+<p>Enter T</p>
+<p><input type="text" id="t3"> </p>
+
+<p><input type="button" value="click" onclick="display()" /> </p>
+</body>
+</html>
