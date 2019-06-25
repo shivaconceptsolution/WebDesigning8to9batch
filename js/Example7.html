@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function fun()
+		{
+
+         s = document.getElementById("txtdata").value;
+         document.getElementById("res").innerHTML=s;
+
+		}
+		function change(a)
+		{
+			 document.getElementById("res").style.backgroundColor=a;
+		}
+
+	</script>
+</head>
+<body>
+
+<div id="res" style="background-color: black; color:white;height: 200px;width: 400px;float: left;">
+
+
+</div>
+<div style="float:left;">
+<input type="button" value="Red" onclick="change(this.value)" />
+<input type="button" value="Green" onclick="change(this.value)" />
+<input type="button" value="Blue" onclick="change(this.value)" />
+</div>
+<div style="clear: both">
+</div>
+<br>
+<br>
+<br>
+Type Here
+<br>
+<textarea id="txtdata" rows="10" cols="45" onkeyup="fun()">
+	
+
+</textarea>
+
+
+</body>
+</html>

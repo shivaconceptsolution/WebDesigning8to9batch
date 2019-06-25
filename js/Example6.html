@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function areatriangle()
+		{
+			base = document.getElementById("txtbase").value;
+			height = document.getElementById("txtheight").value;
+			area = (parseInt(base)*parseInt(height))/2;
+			//alert(area);
+            document.getElementById("res").innerHTML=area;
+		}
+
+	</script>
+</head>
+<body>
+<p>
+	Enter Base
+</p>
+<p>
+	<input type="text" id="txtbase" /></p>
+<p>
+	Enter Height
+</p>
+<p>
+	<input type="text" id="txtheight" />
+	
+
+</p>
+<p>
+	<input type="button" value="Area" onclick="areatriangle()" />
+
+</p>
+
+<div id="res"></div>
+</body>
+</html>
