@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function calc(num)
+		{
+            if(num=="+" || num=='-' || num=='*')
+            {
+                num1=document.getElementById("txtnum1").value;
+                document.getElementById("txtnum1").value="";
+                chr=num;
+            }
+            else if(num=="=")
+            {
+            num2= document.getElementById("txtnum1").value;
+            if(chr=="+")
+            num3=parseInt(num1)+parseInt(num2);
+            if(chr=="-")
+            num3=parseInt(num1)-parseInt(num2);
+            if(chr=="*")
+            num3=parseInt(num1)*parseInt(num2);
+            document.getElementById("txtnum1").value=num3;
+            }
+            else
+            {
+            document.getElementById("txtnum1").value+=num;
+            }
+
+		}
+
+
+	</script>
+</head>
+<body>
+<input type="text" id="txtnum1" />
+<br>
+<input type="button" value="1" onclick="calc(this.value)" />
+<input type="button" value="2" onclick="calc(this.value)" />
+<input type="button" value="+" onclick="calc(this.value)"/>
+<input type="button" value="-" onclick="calc(this.value)"/>
+<input type="button" value="*" onclick="calc(this.value)"/>
+<input type="button" value="=" onclick="calc(this.value)"/>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function fun()
+		{
+			s1="",s2="",s3="";
+			if(document.getElementById("course1").checked)
+             s1=document.getElementById("course1").value;
+            else
+             s1=""; 
+            if(document.getElementById("course2").checked)
+             s2=document.getElementById("course2").value;
+            else
+             s2="";  
+            if(document.getElementById("course3").checked)
+             s3=document.getElementById("course3").value;
+            else
+             s3="";        
+            document.getElementById("res").innerHTML=s1+s2+s3;
+        }
+
+	</script>
+</head>
+<body>
+<h1>Select Course</h1>
+<input type="checkbox" name="course1" id="course1" value="JAVA" onclick="fun()">JAVA
+<br>
+<input type="checkbox" name="course2" id="course2" value=".NET" onclick="fun()">.NET
+<br>
+<input type="checkbox" name="course2" id="course3" value="PHP" onclick="fun()">PHP
+
+<p id="res">
+	
+
+</p>
+</body>
+</html>

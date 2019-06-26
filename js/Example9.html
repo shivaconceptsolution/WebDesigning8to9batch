@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function fun(a)
+		{
+            document.getElementById("res").innerHTML=
+            "<h1> Your Selected Course is "
+            +
+            a
+            +
+            "</h1>";
+		}
+
+	</script>
+</head>
+<body>
+<h1>Select Course</h1>
+<input type="radio" name="course" id="course" value="JAVA" onclick="fun(this.value)">JAVA
+<br>
+<input type="radio" name="course" id="course" value=".NET" onclick="fun(this.value)">.NET
+<br>
+<input type="radio" name="course" id="course" value="PHP" onclick="fun(this.value)">PHP
+
+<p id="res">
+	
+
+</p>
+</body>
+</html>
