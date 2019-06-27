@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+      function fun()
+      {
+      	size=document.getElementById("c[]").length;
+      	s="";
+      	for(i=0;i<size;i++)
+      	{
+             if(document.getElementById("c[]")[i].selected)
+             {
+             	s=s+document.getElementById("c[]")[i].value;
+
+             }
+
+         
+      	}
+       document.getElementById("sp").innerHTML=s;
+      }
+
+	</script>
+</head>
+<body>
+
+<select id="c[]"  onchange="fun()" multiple="true">
+	
+	<option value="India">India</option>
+	<option value="USA">USA</option>
+	<option value="CHINA">CHINA</option>
+	<option value="JAPAN">JAPAN</option>
+</select>
+<span id="sp"></span>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+      function fun(a)
+      {
+         document.getElementById("sp").innerHTML=a;
+        // document.getElementById("txtdata").value=a;
+      }
+
+	</script>
+</head>
+<body>
+
+<select onchange="fun(this.value)">
+	<option value="">Select Country</option>
+	<option value="India">India</option>
+	<option value="USA">USA</option>
+	<option value="CHINA">CHINA</option>
+	<option value="JAPAN">JAPAN</option>
+</select>
+<span id="sp"></span>
+<input type="text" id="txtdata" />
+</body>
+</html>
