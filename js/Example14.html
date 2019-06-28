@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validate()
+		{
+			email = document.getElementById("txtemail").value;
+			atpos=  email.indexOf("@");
+			dotpos = email.lastIndexOf(".");
+			if(document.getElementById("txtuser").value.length==0)
+			{
+				alert("username is required");
+				//document.getElementById("spuser").innerHTML="username is required";
+				return false;
+
+			}
+			else if(document.getElementById("txtpass").value.length<5)
+			{
+				document.getElementById("sppass").innerHTML="password length should be above five digit";
+				return false;
+
+			}
+			else if(document.getElementById("txtpass").value!=document.getElementById("txtcpass").value)
+			{
+				document.getElementById("sppass").innerHTML="password mismatch";
+				return false;
+
+			}
+			else if(atpos==-1 || dotpos==-1 || atpos>dotpos || dotpos-atpos<3 || dotpos+1==email.length )
+			{
+				document.getElementById("spemail").innerHTML = "invalid valid emailid";
+				return false;
+			}
+			else if(isNaN(document.getElementById("txtmobile").value))
+			{
+				document.getElementById("spmobile").innerHTML = "mobile no should be numeric";
+				return false;
+			}
+
+			else if(document.getElementById("txtmobile").value.length!=10)
+			{
+				document.getElementById("spmobile").innerHTML = "mobile no should be 10 digit";
+				return false;
+			}
+
+
+		}
+
+
+	</script>
+</head>
+<body>
+<form action="Example12.html" method="post">
+
+<input type="text" id="txtuser" placeholder="enter username"  />
+<span id="spuser"></span>
+<br>
+<br>
+<input type="text" id="txtpass" placeholder="enter password"  />
+<span id="sppass"></span>
+<br>
+<br>
+<input type="text" id="txtcpass" placeholder="enter confirm password"  />
+
+<br>
+<br>
+<input type="text" id="txtemail" placeholder="enter emailid"  />
+<span id="spemail"></span>
+<br>
+<br>
+<input type="text" id="txtmobile" placeholder="enter mobileno"  />
+<span id="spmobile"></span>
+<br>
+<br>
+<input type="submit" name="btnsubmit" value="Register" onclick="return validate()" />
+
+</form>
+</body>
+</html>
