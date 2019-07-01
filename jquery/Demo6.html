@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        
+        $("#country").change(function(){
+           $("#res").html($(this).val());
+
+        });
+
+		})
+
+	</script>
+</head>
+<body>
+<select id="country">
+	<option value="">Select Country</option>
+	<option value="IND">INDIA</option>
+	<option value="USA">USA</option>
+	<option value="CHINA">CHINA</option>
+	<option value="JAPAN">JAPAN</option>
+
+</select>
+<div id="res"></div>
+</body>
+</html>

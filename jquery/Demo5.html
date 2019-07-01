@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		course1="";	
+		course2="";	
+       $("#c1").change(function(){
+        if($("#c1").prop("checked"))
+       		course1 = $("#c1").val()+" "
+       	else
+            course1 = ""
+         $("#res").html(course1+course2);
+
+       });
+        $("#c2").click(function(){
+        	if($("#c2").prop("checked"))
+       		course2 = $("#c2").val() +" "
+       	else
+            course2 = ""
+         $("#res").html(course1+course2);
+
+       });
+
+		});
+
+
+	</script>
+</head>
+<body>
+<input type="checkbox" name="chk1" id="c1" value="C" />C
+<br>
+<input type="checkbox" name="chk2" id="c2" value="CPP" />CPP
+<br>
+<div id="res"></div>
+
+
+</body>
+</html>

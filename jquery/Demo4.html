@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+       $("#r1").click(function(){
+         $("#res").html($("#r1").val());
+
+       });
+        $("#r2").click(function(){
+         $("#res").html($("#r2").val());
+
+       });
+
+		});
+
+
+	</script>
+</head>
+<body>
+<input type="radio" name="r1" id="r1" value="Male" />Male
+<br>
+<input type="radio" name="r1" id="r2" value="FeMale" />Female
+<br>
+<div id="res"></div>
+
+
+</body>
+</html>
