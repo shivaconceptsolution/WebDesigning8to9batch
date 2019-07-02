@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+        $("#btnsubmit").click(function(){
+          email = $("#txtemail").val();
+          pass = $("#txtpass").val();
+          mobile = $("#txtmobile").val();
+          atpos = email.indexOf("@");
+          dotpos = email.lastIndexOf(".");
+          if(email.length==0)
+          {
+                alert('emailid is required');
+                return false;
+          }
+          else if(atpos==-1 || dotpos==-1 || (dotpos-atpos)<3 || dotpos+1==email.length)
+          {
+          	alert("invalid emailid");
+          	return	 false;
+          }
+          else if(pass.length<5)
+          {
+          	alert('minimum password length is five');
+          	return false;
+          }
+          else if(isNaN(mobile))
+          {
+          	alert("mobile number should be numeric");
+          	return false;
+          }
+          else if(mobile.length!=10)
+
+          {
+           alert("mobile number should be 10 digit");
+          	return false;
+          }
+
+        })
+
+		});
+
+	</script>
+</head>
+<body>
+<form action="Demo3.html" method="post">
+<input type="text" id="txtemail" placeholder="Enter Emailid" />
+<br>
+<input type="text" id="txtpass" placeholder="Enter Password" />
+<br>
+<input type="text" id="txtmobile" placeholder="Enter Mobileno" />
+<br>
+<input type="submit" id="btnsubmit" value="Click">
+</form>
+
+</body>
+</html>

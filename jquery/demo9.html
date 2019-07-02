@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+          $("#b1").click(function(){$("p").show(1000)});
+          $("#b2").click(function(){$("p").hide(1000)});
+           $("#b3").click(function(){$("p").toggle(1000)});
+
+          }
+
+
+			);
+
+	</script>
+</head>
+<body>
+<p>ABC</p>
+<p>HELLO</p>
+<p>HI</p>
+<button id="b1">SHOW</button>
+<button id="b2">HIDE</button>
+<button id="b3">Toggle</button>
+</body>
+</html>
