@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		
+         $("#btn1").click(function(){
+         	$("#img1").fadeIn(1000);
+         });
+          $("#btn2").click(function(){
+         	$("#img1").fadeOut(1000);
+         });
+           $("#btn4").click(function(){
+            $("#img1").fadeToggle(1000);
+         });
+           $("#img1").mouseover(function(){
+         	$("#img1").fadeTo(1000,0.1);
+         });
+           $("#img1").mouseout(function(){
+            $("#img1").fadeTo(1000,1.0);
+         });
+
+		})
+
+	</script>
+</head>
+<body>
+<img src="t.png" height="200" width="200" id="img1" />
+<br>
+<button id="btn1">Fade UP</button>
+<button id="btn2">Fade DOWN</button>
+<button id="btn4">Fade Toggle</button>
+<button id="btn3">FADE TO</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		 $("#img1").mouseover(function(){
+         	$("#img1").slideToggle(1000);
+         });	
+         $("#btn1").click(function(){
+         	$("#img1").slideUp(1000);
+         });
+          $("#btn2").click(function(){
+         	$("#img1").slideDown(1000);
+         });
+           $("#btn3").click(function(){
+         	$("#img1").slideToggle(1000);
+         });
+
+		})
+
+	</script>
+</head>
+<body>
+<img src="t.png" height="100" width="100" id="img1" />
+<br>
+<button id="btn1">SLIDE UP</button>
+<button id="btn2">SLIDE DOWN</button>
+<button id="btn3">SLIDE TOGGLE</button>
+</body>
+</html>
